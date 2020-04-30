@@ -1,0 +1,17 @@
+{
+	"useTabs": true,
+	"endOfLine": "lf",
+	"singleQuote": true,
+	"overrides": [
+		{
+			"files": "*.md",
+			"options": {
+				"printWidth": 70,
+				"useTabs": false,
+				"trailingComma": "none",
+				"arrowParens": "avoid",
+				"proseWrap": "never"
+			}
+		}
+	]
+}

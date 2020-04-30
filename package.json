@@ -2,22 +2,27 @@
   "name": "cddcourse",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint . --cache --fix",
+    "pretest": "npm run lint",
+    "test": "react-scripts test",
+    "posttest": "npm run format",
+    "format": "prettier --loglevel warn --write \"**/*.{js,jsx,md}\""
+  },
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "eslint": "^6.8.0",
+    "eslint-config-tamia": "^7.1.2",
+    "prettier": "^2.0.5"
   },
   "browserslist": {
     "production": [
