@@ -1,3 +1,6 @@
 {
-	"extends": "tamia/react"
+	"extends": "tamia/react",
+	"rules": {
+		"react/prop-types": 0
+	}
 }
