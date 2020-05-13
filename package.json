@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@styled-system/css": "^5.1.5",
+    "@styled-system/prop-types": "^5.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
