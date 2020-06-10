@@ -24,7 +24,7 @@ export const theme = {
 		heading: 'Helvetica Neue, Helvetica, Arial, sans-serif',
 	},
 	fontSizes: {
-		xl: '4rem',
+		xl: '3rem',
 		l: '2rem',
 		m: '1rem',
 		s: '0.9rem',
