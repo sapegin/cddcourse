@@ -1,18 +1,19 @@
-Primary and secondary buttons:
-
 ```jsx
-<Button variant="primary">Click me</Button> <Button variant="secondary">Click me</Button>
+<Button variant="primary">Primary button</Button>
+<Button variant="secondary">Secondary button</Button>
 ```
 
-Disabled:
+Disabled buttons:
 
 ```jsx
-<Button variant="primary" disabled>Click me</Button> <Button variant="secondary" disabled>Click me</Button>
+<Button variant="primary" disabled>Primary button</Button>
+<Button variant="secondary" disabled>Secondary button</Button>
 ```
 
-Button as a link:
+Link buttons:
 
 ```jsx
-<Button variant="primary" as="a" href="/">Click me</Button> <Button variant="secondary" as="a" href="/">Click me</Button>
+<Button variant="primary" as="a" href="/">Primary button</Button>
+<Button variant="secondary" as="a" href="/">Secondary button</Button>
 ```
 
