@@ -34,7 +34,7 @@ const HeadingBase = ({ level, as: Component = `h${level}`, ...props }) => (
 
 const Heading = styled(HeadingBase)(
 	{
-		maring: 0,
+		margin: 0,
 	},
 	variant({
 		variants,
