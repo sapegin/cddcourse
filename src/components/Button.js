@@ -1,41 +1,51 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import css from '@styled-system/css';
+import { variant } from 'styled-system';
 
-const Button = styled.button`
-	box-sizing: border-box;
-	display: inline-block;
-	text-align: center;
-	padding: ${(props) => props.theme.space[3]} ${(props) => props.theme.space[4]};
-	color: ${(props) =>
-		props.variant === 'primary'
-			? props.theme.colors.background
-			: props.theme.colors.primary};
-	background-color: ${(props) =>
-		props.variant === 'primary'
-			? props.theme.colors.primary
-			: props.theme.colors.background};
-	border: 1px solid;
-	border-color: ${(props) => props.theme.colors.primary};
-	border-radius: ${(props) => props.theme.radii.round};
-	font-family: ${(props) => props.theme.fonts.body};
-	font-size: ${(props) => props.theme.fontSizes.m};
-	text-decoration: none;
+const variants = {
+	primary: {
+		color: 'background',
+		backgroundColor: 'primary',
+	},
+	secondary: {
+		color: 'primary',
+		backgroundColor: 'background',
+	},
+};
 
-	&:hover:not(:disabled),
-	&:active:not(:disabled),
-	&:focus {
-		outline: 0;
-		color: ${(props) => props.theme.colors.background};
-		border-color: ${(props) => props.theme.colors.accent};
-		background-color: ${(props) => props.theme.colors.accent};
-		cursor: pointer;
-	}
+const Button = styled.button(
+	css({
+		boxSizing: 'border-box',
+		display: 'inline-block',
+		textAlign: 'center',
+		px: 4,
+		py: 3,
+		color: (props) => (props.variant === 'primary' ? 'background' : 'primary'),
+		backgroundColor: (props) =>
+			props.variant === 'primary' ? 'primary' : 'background',
+		border: '1px solid',
+		borderColor: 'primary',
+		borderRadius: 'round',
+		fontFamily: 'body',
+		fontSize: 'm',
+		textDecoration: 'none',
 
-	&:disabled {
-		opacity: 0.6;
-		filter: saturate(60%);
-	}
-`;
+		'&:hover:not(:disabled),&:active:not(:disabled),&:focus': {
+			outline: 0,
+			color: 'background',
+			borderColor: 'accent',
+			backgroundColor: 'accent',
+			cursor: 'pointer',
+		},
+
+		'&:disabled': {
+			opacity: 0.6,
+			filter: 'saturate(60%)',
+		},
+	}),
+	variant({ variants })
+);
 
 Button.propTypes = {
 	variant: PropTypes.oneOf(['secondary', 'primary']),
