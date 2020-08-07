@@ -6,8 +6,14 @@ const Button = styled.button`
 	display: inline-block;
 	text-align: center;
 	padding: ${(props) => props.theme.space[3]} ${(props) => props.theme.space[4]};
-	color: ${(props) => props.theme.colors.background};
-	background-color: ${(props) => props.theme.colors.primary};
+	color: ${(props) =>
+		props.variant === 'primary'
+			? props.theme.colors.background
+			: props.theme.colors.primary};
+	background-color: ${(props) =>
+		props.variant === 'primary'
+			? props.theme.colors.primary
+			: props.theme.colors.background};
 	border: 1px solid;
 	border-color: ${(props) => props.theme.colors.primary};
 	border-radius: ${(props) => props.theme.radii.round};
@@ -32,8 +38,13 @@ const Button = styled.button`
 `;
 
 Button.propTypes = {
+	variant: PropTypes.oneOf(['secondary', 'primary']),
 	disabled: PropTypes.bool,
 	children: PropTypes.node.isRequired,
+};
+
+Button.defaultProps = {
+	variant: 'secondary',
 };
 
 export default Button;
