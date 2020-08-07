@@ -5,23 +5,23 @@ const Button = styled.button`
 	box-sizing: border-box;
 	display: inline-block;
 	text-align: center;
-	padding: 8px 16px;
-	color: white;
-	background-color: rebeccapurple;
+	padding: ${(props) => props.theme.space[3]} ${(props) => props.theme.space[4]};
+	color: ${(props) => props.theme.colors.background};
+	background-color: ${(props) => props.theme.colors.primary};
 	border: 1px solid;
-	border-color: rebeccapurple;
-	border-radius: 20px;
-	font-family: sans-serif;
-	font-size: 16px;
+	border-color: ${(props) => props.theme.colors.primary};
+	border-radius: ${(props) => props.theme.radii.round};
+	font-family: ${(props) => props.theme.fonts.body};
+	font-size: ${(props) => props.theme.fontSizes.m};
 	text-decoration: none;
 
 	&:hover:not(:disabled),
 	&:active:not(:disabled),
 	&:focus {
 		outline: 0;
-		color: white;
-		border-color: salmon;
-		background-color: salmon;
+		color: ${(props) => props.theme.colors.background};
+		border-color: ${(props) => props.theme.colors.accent};
+		background-color: ${(props) => props.theme.colors.accent};
 		cursor: pointer;
 	}
 
